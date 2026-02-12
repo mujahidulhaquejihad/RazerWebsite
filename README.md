@@ -148,17 +148,6 @@ define('DB_NAME', 'wp_project'); // Your database name
 └── seed_components_100.sql # Optional: 100 sample components
 ```
 
----
-
-## Design previews
-
-| Page | Preview |
-|------|--------|
-| Home | ![Home](./design/Index1.JPG) |
-| Components / options | ![Options](./design/options.JPG) |
-| Login | ![Login](./design/login.JPG) |
-
----
 
 ## License
 
