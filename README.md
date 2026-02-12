@@ -3,6 +3,22 @@
 A full-stack web application where users can browse PC components, build custom rigs, and place orders. Includes an admin panel for managing users, orders, inventory, and contact messages.
 
 **Note:** This is a demo/portfolio project.
+<img width="1920" height="1030" alt="13" src="https://github.com/user-attachments/assets/062f195d-b756-42c0-95a6-ca3dbc482151" />
+<img width="1920" height="1030" alt="12" src="https://github.com/user-attachments/assets/3d11be35-c638-4380-a1e1-465d72809693" />
+<img width="1920" height="1030" alt="11" src="https://github.com/user-attachments/assets/0e382849-0017-450f-8785-a66f069d8268" />
+<img width="1920" height="1030" alt="10" src="https://github.com/user-attachments/assets/dedbb720-3773-4710-94bf-909d29976522" />
+<img width="1920" height="1030" alt="9" src="https://github.com/user-attachments/assets/e163ae04-9514-4457-b53e-6243530c60c6" />
+<img width="1920" height="1030" alt="8" src="https://github.com/user-attachments/assets/5e1d9140-232c-4864-9697-652df06a8101" />
+<img width="1920" height="1030" alt="7" src="https://github.com/user-attachments/assets/60aef070-1bea-4fc0-9316-12102ccee641" />
+<img width="1920" height="1030" alt="6" src="https://github.com/user-attachments/assets/928b472a-cab5-4d34-9648-3c1d90885382" />
+<img width="1920" height="1030" alt="5" src="https://github.com/user-attachments/assets/348af722-6eb6-477c-b4f1-32500f39cc1f" />
+<img width="1920" height="1030" alt="4" src="https://github.com/user-attachments/assets/1abebeee-ef71-4c94-9a1c-8c462f477c8f" />
+<img width="1920" height="1030" alt="3" src="https://github.com/user-attachments/assets/a782b2e8-df78-4f67-bb7f-92a6ce6961f7" />
+<img width="1920" height="1030" alt="2" src="https://github.com/user-attachments/assets/e25a4e02-bee2-4fee-9e6e-74e86ee05de6" />
+<img width="1920" height="1030" alt="1" src="https://github.com/user-attachments/assets/59f3a426-eeef-4900-aa6c-e54e3ace6c58" />
+<img width="1920" height="1030" alt="01" src="https://github.com/user-attachments/assets/2df20c19-cf59-4c11-9ffd-ae739f3cea7c" />
+
+
 
 ---
 
