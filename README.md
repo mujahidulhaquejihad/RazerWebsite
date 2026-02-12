@@ -3,20 +3,22 @@
 A full-stack web application where users can browse PC components, build custom rigs, and place orders. Includes an admin panel for managing users, orders, inventory, and contact messages.
 
 **Note:** This is a demo/portfolio project.
-<img width="1920" height="1030" alt="13" src="https://github.com/user-attachments/assets/062f195d-b756-42c0-95a6-ca3dbc482151" />
-<img width="1920" height="1030" alt="12" src="https://github.com/user-attachments/assets/3d11be35-c638-4380-a1e1-465d72809693" />
-<img width="1920" height="1030" alt="11" src="https://github.com/user-attachments/assets/0e382849-0017-450f-8785-a66f069d8268" />
-<img width="1920" height="1030" alt="10" src="https://github.com/user-attachments/assets/dedbb720-3773-4710-94bf-909d29976522" />
-<img width="1920" height="1030" alt="9" src="https://github.com/user-attachments/assets/e163ae04-9514-4457-b53e-6243530c60c6" />
-<img width="1920" height="1030" alt="8" src="https://github.com/user-attachments/assets/5e1d9140-232c-4864-9697-652df06a8101" />
-<img width="1920" height="1030" alt="7" src="https://github.com/user-attachments/assets/60aef070-1bea-4fc0-9316-12102ccee641" />
-<img width="1920" height="1030" alt="6" src="https://github.com/user-attachments/assets/928b472a-cab5-4d34-9648-3c1d90885382" />
-<img width="1920" height="1030" alt="5" src="https://github.com/user-attachments/assets/348af722-6eb6-477c-b4f1-32500f39cc1f" />
-<img width="1920" height="1030" alt="4" src="https://github.com/user-attachments/assets/1abebeee-ef71-4c94-9a1c-8c462f477c8f" />
-<img width="1920" height="1030" alt="3" src="https://github.com/user-attachments/assets/a782b2e8-df78-4f67-bb7f-92a6ce6961f7" />
-<img width="1920" height="1030" alt="2" src="https://github.com/user-attachments/assets/e25a4e02-bee2-4fee-9e6e-74e86ee05de6" />
-<img width="1920" height="1030" alt="1" src="https://github.com/user-attachments/assets/59f3a426-eeef-4900-aa6c-e54e3ace6c58" />
-<img width="1920" height="1030" alt="01" src="https://github.com/user-attachments/assets/2df20c19-cf59-4c11-9ffd-ae739f3cea7c" />
+<img width="1920" height="1030" alt="01" src="https://github.com/user-attachments/assets/df903797-2330-47d1-87ae-aa6765fe5d5c" />
+<img width="1920" height="1030" alt="1" src="https://github.com/user-attachments/assets/fb1145e1-f34b-48f8-85f2-c2b5c9ab803c" />
+<img width="1920" height="1030" alt="2" src="https://github.com/user-attachments/assets/7ed74657-acef-4fdb-8176-a1bcaeb1c1d5" />
+<img width="1920" height="1030" alt="3" src="https://github.com/user-attachments/assets/f29a97d9-b1c6-41f9-b904-956e7f73d732" />
+<img width="1920" height="1030" alt="4" src="https://github.com/user-attachments/assets/3661459c-2a4a-42df-b211-b36112be7632" />
+<img width="1920" height="1030" alt="5" src="https://github.com/user-attachments/assets/f7feea93-213b-4477-8e67-0a97afb72d05" />
+<img width="1920" height="1030" alt="6" src="https://github.com/user-attachments/assets/ff9b6db5-0620-4f4f-b83c-588c33a22798" />
+<img width="1920" height="1030" alt="7" src="https://github.com/user-attachments/assets/1d1f8834-1c53-4d40-bc82-2fe4ce8e4b07" />
+<img width="1920" height="1030" alt="8" src="https://github.com/user-attachments/assets/da188e8d-6d48-4642-b6c8-fa20a877d813" />
+<img width="1920" height="1030" alt="9" src="https://github.com/user-attachments/assets/2409687e-7d1c-4912-8213-0e0f756aeb57" />
+<img width="1920" height="1030" alt="10" src="https://github.com/user-attachments/assets/4153df19-0558-4ab6-bec0-b220dbd8f9bc" />
+<img width="1920" height="1030" alt="11" src="https://github.com/user-attachments/assets/725c6693-9995-4848-9735-4f3a74a3912d" />
+<img width="1920" height="1030" alt="12" src="https://github.com/user-attachments/assets/9228d266-0dff-4342-b9c1-e64047915631" />
+<img width="1920" height="1030" alt="13" src="https://github.com/user-attachments/assets/e010114f-a621-41a0-85bd-9f701d1392ce" />
+
+
 
 
 
