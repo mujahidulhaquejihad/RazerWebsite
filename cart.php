@@ -64,6 +64,7 @@ $_SESSION['total_price'] = $total_price;
         <?php if (empty($lines)): ?>
             <p class="cart-empty">Cart is empty. <a href="components.php">Add components</a> to build your PC.</p>
         <?php else: ?>
+        <div class="cart-table-wrap">
         <table class="order-table">
             <thead>
                 <tr>
@@ -109,6 +110,7 @@ $_SESSION['total_price'] = $total_price;
                 </tr>
             </tfoot>
         </table>
+        </div>
 
         <div class="payment-container">
             <h1>Payment method</h1>

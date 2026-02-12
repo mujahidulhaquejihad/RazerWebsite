@@ -1,51 +1,83 @@
 .main_cart {
-  padding: 1em 2em 3em;
+  padding: 1rem;
   font-family: 'Roboto Mono', monospace;
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
 }
 .main_cart h1 {
-  margin: 1em 0;
+  margin: 1rem 0;
   text-align: center;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 600;
 }
 .cart-empty {
   text-align: center;
-  padding: 2em;
+  padding: 2rem 1rem;
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.6);
 }
 .cart-empty a {
   color: rgba(54, 236, 78, 0.95);
+  padding: 0.5rem;
+  display: inline-block;
 }
 .cart-empty a:hover {
   color: #36ec4e;
 }
 
+.cart-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 0 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
 .order-table {
-  margin: 1em 2em;
-  min-width: 300px;
+  margin: 0;
+  min-width: 320px;
   font-family: 'Roboto Mono', monospace;
   background: rgba(18, 18, 18, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
+  border: none;
+  border-radius: 0;
   overflow: hidden;
   text-align: center;
+  width: 100%;
 }
 
 .order-table th {
-  padding: 1rem 1.25rem;
+  padding: 0.75rem 0.5rem;
   background: rgba(54, 236, 78, 0.12);
   border-bottom: 1px solid rgba(54, 236, 78, 0.25);
   color: #fff;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
+  white-space: nowrap;
 }
 .order-table td {
-  padding: 1rem 1.25rem;
+  padding: 0.75rem 0.5rem;
   color: rgba(255, 255, 255, 0.85);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+@media (min-width: 600px) {
+  .main_cart {
+    padding: 1em 2em 3em;
+  }
+  .main_cart h1 {
+    font-size: 1.5rem;
+  }
+  .order-table th {
+    padding: 1rem 1.25rem;
+    font-size: 0.9rem;
+  }
+  .order-table td {
+    padding: 1rem 1.25rem;
+    font-size: 0.9rem;
+  }
 }
 .order-table tbody tr:last-child td {
   border-bottom: none;
@@ -72,8 +104,10 @@
   overflow: hidden;
 }
 .cart-qty-btn {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
   border: none;
   background: transparent;
   font-family: 'Roboto Mono', monospace !important;
@@ -84,6 +118,7 @@
   cursor: pointer;
   transition: background 0.15s, color 0.15s;
   -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
 }
 .cart-qty-btn:hover {
   background: rgba(54, 236, 78, 0.15);
@@ -124,12 +159,13 @@
 .payment-container {
   font-family: 'Roboto Mono', monospace;
   text-align: center;
-  margin: 30px;
+  margin: 1.5rem 1rem;
+  padding: 0 0.5rem;
 }
 .payment-container h1 {
-  margin: 50px;
+  margin: 2rem 0 1rem;
   color: #fff;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 600;
 }
 .payment-container form {
@@ -137,24 +173,35 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  gap: 1rem;
 }
 
 .methods {
   width: 100%;
+  max-width: 360px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
   align-items: center;
 }
 .delivery-option {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0.5rem;
+  min-height: 44px;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 #place-order {
-  width: 200px;
+  width: 100%;
+  max-width: 280px;
   padding: 1rem 1.5rem;
+  min-height: 48px;
   font-family: 'Roboto Mono', monospace;
   font-size: 1rem;
   font-weight: 500;
@@ -164,9 +211,28 @@
   border-radius: 10px;
   cursor: pointer;
   transition: background 0.2s, box-shadow 0.2s;
+  -webkit-tap-highlight-color: transparent;
 }
 
 #place-order:hover {
   background: rgba(54, 236, 78, 1);
   box-shadow: 0 0 20px rgba(54, 236, 78, 0.25);
+}
+
+@media (min-width: 600px) {
+  .payment-container {
+    margin: 30px;
+  }
+  .payment-container h1 {
+    margin: 50px 0 1.5rem;
+    font-size: 1.25rem;
+  }
+  .methods {
+    max-width: none;
+    flex-wrap: nowrap;
+  }
+  #place-order {
+    width: 200px;
+    max-width: none;
+  }
 }

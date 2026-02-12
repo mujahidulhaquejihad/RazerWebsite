@@ -8,6 +8,9 @@
     <style>
         <?php include 'styles/navigation.css' ?>
     </style>
+    <style>
+        <?php include 'styles/devices.css' ?>
+    </style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

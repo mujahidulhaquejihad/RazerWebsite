@@ -6,9 +6,17 @@
 }
 
 .address-details {
-  width: 80%;
-  width: 70vw;
+  width: 100%;
+  max-width: 800px;
   margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 600px) {
+  .address-details {
+    width: 70%;
+  }
 }
 
 .address-details * {

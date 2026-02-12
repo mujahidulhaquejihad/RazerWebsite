@@ -357,6 +357,9 @@
   .admin-layout {
     flex-direction: column;
   }
+  .admin-main {
+    padding: 1rem;
+  }
   .admin-sidebar {
     width: 100%;
     flex-direction: row;
@@ -375,12 +378,43 @@
     gap: 0.25rem;
   }
   .admin-sidebar-nav a {
-    padding: 0.5rem 0.75rem;
+    padding: 0.6rem 0.85rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    -webkit-tap-highlight-color: transparent;
   }
   .admin-logout {
     margin-top: 0;
     border-top: none;
     border-left: 1px solid rgba(255, 255, 255, 0.08);
     padding-left: 1rem;
+  }
+  .admin-table {
+    font-size: 0.8rem;
+  }
+  .admin-table th,
+  .admin-table td {
+    padding: 0.5rem 0.5rem;
+  }
+  .admin-search-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .admin-search-input {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-page-title {
+    font-size: 1.25rem;
+  }
+  .admin-card {
+    padding: 1rem;
+  }
+  .admin-btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
   }
 }

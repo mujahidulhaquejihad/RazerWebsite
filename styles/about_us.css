@@ -6,10 +6,27 @@
 
 .about-page {
   font-family: 'Roboto Mono', monospace;
-  padding: 2rem;
+  padding: 1rem;
   max-width: 800px;
   margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
   color: rgba(255, 255, 255, 0.9);
+}
+
+@media (min-width: 600px) {
+  .about-page {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 1.4rem;
+  }
+  .about-section {
+    padding: 1.25rem;
+  }
 }
 
 .about-title {

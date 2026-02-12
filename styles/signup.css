@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 1rem;
+  padding: 1rem 0.75rem 2rem;
 }
 
 .auth-card {
@@ -17,8 +17,15 @@
   background: rgba(18, 18, 18, 0.95);
   border: 1px solid rgba(54, 236, 78, 0.25);
   border-radius: 12px;
-  padding: 2rem 2rem 2.25rem;
+  padding: 1.5rem 1.25rem 2rem;
   box-shadow: 0 0 40px rgba(54, 236, 78, 0.08);
+  box-sizing: border-box;
+}
+
+@media (min-width: 500px) {
+  .auth-card {
+    padding: 2rem 2rem 2.25rem;
+  }
 }
 
 .auth-card-header {
@@ -128,6 +135,7 @@
 .auth-submit {
   margin-top: 0.5rem;
   padding: 0.85rem 1.25rem;
+  min-height: 48px;
   font-family: 'Roboto Mono', monospace;
   font-size: 0.95rem;
   font-weight: 500;
@@ -138,6 +146,7 @@
   cursor: pointer;
   letter-spacing: 0.04em;
   transition: background 0.2s, box-shadow 0.2s;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .auth-submit:hover {

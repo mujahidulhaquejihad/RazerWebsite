@@ -1,12 +1,18 @@
 /* Browse components – full width, items side by side */
 .components-page {
   min-height: calc(100vh - 140px);
-  padding: 1.5rem 1.5rem 3rem;
+  padding: 1rem 1rem 2rem;
   width: 100%;
   max-width: 100%;
   margin: 0;
   box-sizing: border-box;
-  align-self: stretch; /* override parent align-items: center so we use full width */
+  align-self: stretch;
+}
+
+@media (min-width: 600px) {
+  .components-page {
+    padding: 1.5rem 1.5rem 3rem;
+  }
 }
 
 .components-title {
@@ -291,7 +297,12 @@
 
 .component-add {
   display: inline-block;
-  padding: 0.5rem 0.85rem;
+  padding: 0.6rem 1rem;
+  min-height: 44px;
+  line-height: 1.3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-family: 'Roboto Mono', monospace;
   font-size: 0.85rem;
   color: #000;
@@ -299,6 +310,7 @@
   text-decoration: none;
   border-radius: 8px;
   transition: background 0.2s;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .component-add:hover {
@@ -334,5 +346,21 @@
 @media (max-width: 640px) {
   .components-sidebar {
     grid-template-columns: 1fr;
+  }
+  .components-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .component-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .components-title {
+    font-size: 1.35rem;
+  }
+  .components-sub {
+    font-size: 0.9rem;
   }
 }
