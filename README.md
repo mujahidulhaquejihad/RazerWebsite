@@ -1,4 +1,4 @@
-# PC Building Website
+# RAZER Website
 
 A full-stack web application where users can browse PC components, build custom rigs, and place orders. Includes an admin panel for managing users, orders, inventory, and contact messages.
 
