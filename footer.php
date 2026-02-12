@@ -7,7 +7,7 @@
 </head>
 <body>
     <footer>
-      <a href="home.php"><img src="images/logo.png" alt="" style="width: 200px"></a>
+      <a href="home.php"><img src="images/logo.jpg" alt="" style="width: 200px"></a>
       <nav class="footer-social">
         <a href="#"
         ><img src="images/instagram.png" alt="" style="width: 48px"

@@ -1,96 +1,59 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) session_start();
+$sent = isset($_GET['sent']) && $_GET['sent'] === '1';
+$error = isset($_GET['error']) && $_GET['error'] === '1';
+?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact us</title>
-    <link rel="stylesheet" href="styles/contact_us.css" />
-  </head>
-  <body>
-    <!-- header -->
-    <?php include 'navigation.php' ;
-      
-    ?>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | PC Builder</title>
+    <link rel="stylesheet" href="styles/contact_us.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <?php include 'navigation.php'; ?>
 
-    <!-- main content -->
-    <div class="flex-container">
-      <div class="contact">
-        <h2 style='color:white;margin-bottom:30px;'>Contact Us</h2>
-        <p>
-          
-          Middle Badda, BEST CSE UNIVERSITY<br />
-          Email : <a href="#email">info@razer.in</a>
-        </p>
-        <br />
-        <p>
-          Office Timings : From 10Am - 6 Pm , MON-SAT. We follow strict Covid
-          Guidelines to ensure a safe and a healthy environment for you
-        </p>
-        <br />
-        <p>Contact Us</p>
-        <br />
-        <p>
-          Phone Number: 0124-*******/0124-******* (From 10AM - 6PM) MON-SAT.
-        </p>
-        <p>
-          <b>Bank Details</b><br />
-          BANK NAME : SCAM BANK<br />
-          ACCOUNT NUMBER : 0000000000000<br />
-          ACCOUNT HOLDER NAME : RAZER RETAIL LLP<br />
-          ACCOUNT TYPE : CURRENT <br />
-          IFSC CODE: SCAN000****<br />
-          BRANCH : NEHRU PLACE
-        </p>
-      </div>
-      <div class="form">
-        <h2 style='color:white;margin-bottom:30px;'>Feedback</h2>
-        <label for="first_name"><b>Name</b></label>
-        <input
-          type="text"
-          placeholder="Enter first name"
-          name="first_name"
-          id="first_name"
-          required
-        /><br />
-        <label for="phone"><b>Phone Number</b></label>
-        <input
-          type="text"
-          placeholder="Enter phone number"
-          name="phone"
-          id="phone"
-          required
-        /><br />
-        <label for="email"><b>Email</b></label>
-        <input
-          type="text"
-          placeholder="Enter Email"
-          name="email"
-          id="email"
-          required
-        /><br />
-        <button type="button">Register</button>
-        <p style='margin: 30px 0;'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-          exercitationem nam ratione veniam commodi, hic beatae sint eum nisi
-          culpa alias itaque voluptas numquam rerum suscipit, in sunt obcaecati
-          provident quaerat. Sed cupiditate sint, laudantium quis necessitatibus
-          atque esse aliquam odio ut. Dicta, explicabo. Sint aut maxime quas!
-          Placeat ex sit eos, perspiciatis dignissimos nemo fugiat neque soluta
-          ipsa? Est facere quos sint! Voluptatum aut error esse velit
-          perferendis, nostrum debitis quia corrupti consequuntur in sint neque
-          nam exercitationem alias minus dolorum blanditiis consectetur eum amet
-          tempora nulla molestiae! Earum reiciendis, inventore modi natus
-          delectus quasi maiores fugiat reprehenderit molestias.
-        </p>
-      </div>
+    <div class="contact-page">
+        <h1 class="contact-page-title">Contact Us</h1>
+        <p class="contact-page-intro">Get in touch for custom builds, bulk orders, or support.</p>
+
+        <?php if ($sent): ?>
+        <p class="contact-flash contact-flash-success">Message sent. We'll get back to you soon.</p>
+        <?php endif; ?>
+        <?php if ($error): ?>
+        <p class="contact-flash contact-flash-error">Please fill in all fields and try again.</p>
+        <?php endif; ?>
+
+        <div class="contact-flex">
+            <div class="contact-info">
+                <h2>Visit or reach out</h2>
+                <p><strong>Address</strong><br>Level 4, Tech Hub Tower, Gulshan Avenue North, Dhaka 1212, Bangladesh</p>
+                <p><strong>Email</strong><br><a href="mailto:support@pcbuilder-bd.com">support@pcbuilder-bd.com</a></p>
+                <p><strong>Phone</strong><br>+880 1XXX-XXXXXX (10:00 AM – 8:00 PM, Sat–Thu)</p>
+                <p><strong>Office hours</strong><br>10:00 AM – 8:00 PM, Saturday – Thursday. Closed on Friday.</p>
+            </div>
+            <div class="contact-form-wrap">
+                <h2>Send a message</h2>
+                <form class="contact-form" action="contact_submit.php" method="post">
+                    <label for="contact_name">Name</label>
+                    <input type="text" id="contact_name" name="name" placeholder="Your name" required>
+                    <label for="contact_phone">Phone</label>
+                    <input type="text" id="contact_phone" name="phone" placeholder="Phone number" required>
+                    <label for="contact_email">Email</label>
+                    <input type="email" id="contact_email" name="email" placeholder="your@email.com" required>
+                    <label for="contact_message">Message</label>
+                    <textarea id="contact_message" name="message" rows="4" placeholder="Ask about builds, compatibility, or bulk orders..." required></textarea>
+                    <button type="submit">Send message</button>
+                </form>
+            </div>
+        </div>
     </div>
 
-    <!-- main content end -->
-
-    <!-- footer -->
-    <?php include 'footer.php' ?>
-    
-    </div>
-  </body>
+    <?php include 'footer.php'; ?>
+</body>
 </html>

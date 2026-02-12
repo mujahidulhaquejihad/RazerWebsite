@@ -1,0 +1,202 @@
+/* User dashboard – full page layout, same theme */
+.dashboard {
+  min-height: calc(100vh - 140px);
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+.dashboard-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  background: rgba(18, 18, 18, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dashboard-welcome {
+  flex: 1;
+  min-width: 0;
+}
+
+.dashboard-title {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 0.2rem;
+  letter-spacing: 0.02em;
+}
+
+.dashboard-sub {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
+}
+
+.dashboard-logout-btn {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #000;
+  background: rgba(54, 236, 78, 0.9);
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.dashboard-logout-btn:hover {
+  background: rgba(54, 236, 78, 1);
+  box-shadow: 0 0 16px rgba(54, 236, 78, 0.3);
+}
+
+.dashboard-flash {
+  font-family: 'Roboto Mono', monospace;
+  padding: 0.75rem 2rem;
+  background: rgba(54, 236, 78, 0.15);
+  border-bottom: 1px solid rgba(54, 236, 78, 0.3);
+  color: rgba(54, 236, 78, 0.95);
+  margin: 0;
+}
+
+.dashboard-body {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dashboard-body-full {
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 900px) {
+  .dashboard-body {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+  align-content: start;
+}
+
+.dashboard-card {
+  display: block;
+  padding: 1.5rem;
+  background: rgba(18, 18, 18, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+
+.dashboard-card:hover {
+  border-color: rgba(54, 236, 78, 0.4);
+  box-shadow: 0 0 24px rgba(54, 236, 78, 0.1);
+  transform: translateY(-2px);
+}
+
+.dashboard-card-primary {
+  border-color: rgba(54, 236, 78, 0.35);
+  background: linear-gradient(135deg, rgba(54, 236, 78, 0.08) 0%, rgba(18, 18, 18, 0.95) 100%);
+}
+
+.dashboard-card-primary:hover {
+  border-color: rgba(54, 236, 78, 0.6);
+  box-shadow: 0 0 28px rgba(54, 236, 78, 0.15);
+}
+
+.dashboard-card-icon {
+  display: block;
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.dashboard-card h2 {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.dashboard-card p {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
+}
+
+.dashboard-sidebar {
+  min-width: 0;
+}
+
+.dashboard-info {
+  padding: 1.5rem;
+  background: rgba(18, 18, 18, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  position: sticky;
+  top: 1rem;
+}
+
+.dashboard-info h2 {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+
+.dashboard-info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dashboard-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.dashboard-info-item .label {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.dashboard-info-item .value {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.9rem;
+  color: #fff;
+  word-break: break-all;
+}
+
+.dashboard-back {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-family: 'Roboto Mono', monospace;
+  color: rgba(54, 236, 78, 0.9);
+  text-decoration: none;
+}
+
+.dashboard-back:hover {
+  color: rgba(54, 236, 78, 1);
+}

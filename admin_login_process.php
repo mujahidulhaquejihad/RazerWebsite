@@ -1,28 +1,25 @@
 <?php
 session_start();
-include('connect_database.php');
+include('connect_database.php'); // Your database connection file
 
-$username = $_POST['username'];
-$password = $_POST['password'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-$username = $conn->real_escape_string($username);
-$password = $conn->real_escape_string($password);
+    // Query to check if the user exists and is an admin
+    $query = "SELECT * FROM users WHERE username = :username AND role = 'admin'";
+    $stmt = $pdo->prepare($query);
+    $stmt->execute([':username' => $username]);
 
-$sql = "SELECT * FROM users WHERE username='$username' LIMIT 1";
-$result = $conn->query($sql);
+    $user = $stmt->fetch();
 
-if ($result->num_rows > 0) {
-    $row = $result->fetch_assoc();
-    
-    if (password_verify($password, $row['password'])) {
-        $_SESSION['admin'] = $username;  // Start a session for the admin
-        header('Location: admin_dashboard.php');  
+    // If user exists and password matches
+    if ($user && password_verify($password, $user['password'])) {
+        $_SESSION['admin_logged_in'] = true;
+        $_SESSION['admin_username'] = $username;
+        header('Location: admin_dashboard.php'); // Redirect to dashboard
     } else {
-        echo "Invalid password!";
+        echo "Invalid login credentials.";
     }
-} else {
-    echo "No user found with that username!";
 }
-
-$conn->close();
 ?>

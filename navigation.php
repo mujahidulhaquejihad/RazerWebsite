@@ -21,18 +21,21 @@
           </div>
     
           <div class="logo">
-            <a href="home.php"><img src="images/logo.png" alt="" style="width: 112px" style="position: absolute; top: 10px; left: 40px;"/></a>
+            <a href="home.php"><img src="images/logo.jpg" alt="" /></a>
           </div>
-    
+
           <navigation class="links" id="navigation_links">
-            <a href="custom_rigs.php">BUILD YOUR PC</a>
+            <form class="header-search" method="get" action="search.php">
+              <input type="search" name="q" placeholder="Search parts..." aria-label="Search components">
+              <button type="submit">Search</button>
+            </form>
+            <a href="components.php">COMPONENTS</a>
             <a href="contact.php">CONTACT</a>
             <a href="about_us.php">ABOUT US</a>
-            <a href="cart.php">CART</a>
           </navigation>
     
           <div class="kart">  
-            <a class="active" href="myaccount.php" >
+            <a class="active" href="dashboard.php" >
                 <img src="images/user.png" alt="" style="width: 32px"/>
             </a>
             

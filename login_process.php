@@ -4,24 +4,33 @@ include 'connect_database.php';
  
 if(isset($_POST['submit']))
 {
-    $username = mysqli_real_escape_string($conn, $_POST['username']);
+    $username = mysqli_real_escape_string($database, $_POST['username']);
     $password = $_POST['password'];
     
     $sql = "SELECT * FROM user WHERE email='$username' ";
-    $result = mysqli_query($conn, $sql);
+    $result = mysqli_query($database, $sql);
     $row = mysqli_fetch_assoc($result);
-    $dbStoredPASSWORD = $row['password'];
 
-  if (password_verify ($password, $dbStoredPASSWORD)) 
-  {
-      $_SESSION['customer'] = $username;
-      header('location:myaccount.php');
-  } 
-  else 
-  {
-    header('location:login.php?message=1'); //send message=1 tologin.php
-    $message =  'incorrect Credentials';
-  }
+    if (!$row) {
+        header('location:login.php?message=1');
+        exit;
+    }
+
+    $dbStoredPASSWORD = $row['password'];
+    $banned = isset($row['banned']) ? (int)$row['banned'] : 0;
+
+    if ($banned) {
+        header('location:login.php?message=banned');
+        exit;
+    }
+
+    if (password_verify($password, $dbStoredPASSWORD)) {
+        $_SESSION['customer'] = $username;
+        header('location:dashboard.php');
+    } else {
+        header('location:login.php?message=1');
+        $message = 'incorrect Credentials';
+    }
 
 }
 

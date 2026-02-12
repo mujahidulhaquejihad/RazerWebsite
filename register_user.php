@@ -1,52 +1,77 @@
 <?php
 session_start();
 include 'connect_database.php';
+$firstname=$lastname=$contact=$address=$city=$state=$country=$zipcode=$user='';
+if(isset($_POST['submit']))
+{
+    if(!empty($_POST['first_name']))
+    {
+        $firstname=$_POST['first_name'];
+    }   
+    if(!empty($_POST['last_name']))
+    {
+        $lastname=$_POST['last_name'];
+    }
+    if(!empty($_POST['contact_number']))
+    {
+        $contact=$_POST['contact_number'];
+    }
+    if(!empty($_POST['address']))
+    {
+        $address=$_POST['address'];
+    }
+    if(!empty($_POST['city']))
+    {
+        $city=$_POST['city'];
+    }
+    if(!empty($_POST['state']))
+    {
+        $state=$_POST['state'];
+    }
+    if(!empty($_POST['country']))
+    {
+        $country=$_POST['country'];
+    }
+    if(!empty($_POST['zip-code']))
+    {
+        $zipcode=$_POST['zip-code'];
+    }
+    $user=$_SESSION['customer'];
 
-if (isset($_POST['submit'])) {
-    // Get and sanitize all input fields
-    $firstname = isset($_POST['first_name']) ? trim($_POST['first_name']) : '';
-    $lastname = isset($_POST['last_name']) ? trim($_POST['last_name']) : '';
-    $contact = isset($_POST['contact_number']) ? trim($_POST['contact_number']) : '';
-    $address = isset($_POST['address']) ? trim($_POST['address']) : '';
-    $city = isset($_POST['city']) ? trim($_POST['city']) : '';
-    $state = isset($_POST['state']) ? trim($_POST['state']) : '';
-    $country = isset($_POST['country']) ? trim($_POST['country']) : '';
-    $zipcode = isset($_POST['zip-code']) ? trim($_POST['zip-code']) : '';
+    $search="SELECT user_id FROM user_data where user_id='$user'";
 
-    $user = $_SESSION['customer'];
+    $result = $database->query($search);
 
-    // Check if user already has data
-    $search = "SELECT user_id FROM user_data WHERE user_id='$user'";
-    $result = $conn->query($search);
-
-    if ($result && $result->num_rows > 0) {
-        // User already exists, so UPDATE instead of DELETE + INSERT
-        $update = "UPDATE user_data 
-                   SET firstname='$firstname', lastname='$lastname', address='$address', city='$city', state='$state', 
-                       country='$country', zip_code='$zipcode', `mobile-number`='$contact'
-                   WHERE user_id='$user'";
-
-        if ($conn->query($update) === TRUE) {
-            $_SESSION['update'] = 'Details updated successfully!';
-            $_SESSION['updated_successfully'] = true;
-            header('Location: myaccount.php');
-            exit();
-        } else {
-            echo "Error updating record: " . $conn->error;
+    if ($result->num_rows > 0) 
+    {
+        $delete="DELETE FROM `user_data` WHERE user_id='$user'";
+        if ($database->query($delete) === TRUE) 
+        {
+            echo 'deleted successfully';
         }
-    } else {
-        // No existing record, do INSERT
-        $insert = "INSERT INTO user_data (user_id, firstname, lastname, address, city, state, country, zip_code, `mobile-number`) 
-                   VALUES ('$user', '$firstname', '$lastname', '$address', '$city', '$state', '$country', '$zipcode', '$contact')";
-
-        if ($conn->query($insert) === TRUE) {
-            $_SESSION['update'] = 'Details updated successfully!';
-            $_SESSION['updated_successfully'] = true;
-            header('Location: myaccount.php');
-            exit();
-        } else {
-            echo "Error inserting record: " . $conn->error;
+        else
+        {
+            echo "error: ".$database->error;
         }
+    } 
+    
+    
+    $insert="INSERT INTO `user_data`(`user_id`, `firstname`,`lastname`,`address`,`city`,`state`,`country`,`zip_code`,`mobile-number`) VALUES ('$user','$firstname','$lastname','$address','$city','$state','$country','$zipcode','$contact')";
+
+    if ($database->query($insert) === TRUE) 
+    {
+        echo "New record created successfully";
+        $_SESSION['update']='Details updated successfully';
+        echo '<script> window.location.href = "myaccount.php";</script>';
+    }
+    else 
+    {
+        echo "Error: " . $insert . "<br>" . $database->error;
     }
 }
+
+    
+
+
+
 ?>

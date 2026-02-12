@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.customrig-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.build_inputs {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: center;
+  text-align: center;
+}
+form {
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+select {
+  text-align: center;
+  color: black;
+  background-color: white;
+  width: auto;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+option {
+  background-color: white;
+}
+/* Step-by-step: show only first category until previous is selected (JS shows rest) */
+.product-select-wrap:not(:first-of-type) {
+  display: none;
+}
+
+.product-select-wrap {
+  width: 100%;
+  max-width: 420px;
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+
+.product-select-wrap::before {
+  content: attr(data-label);
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #8b5cf6;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.product-search {
+  width: 100%;
+  padding: 0.6rem 0.85rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #1f2937;
+  background: #fff;
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.product-search::placeholder {
+  color: #9ca3af;
+}
+
+.product-search:focus {
+  outline: none;
+  border-color: #6d28d9;
+  box-shadow: 0 0 0 2px rgba(109, 40, 217, 0.2);
+}
+
+.product-select-wrap select {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* buttons */
+.order_buttons {
+  /* background-color: chartreuse; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.button-inp {
+  margin: 20px;
+  padding: 10px;
+}
+
+.button-inp:hover {
+  cursor: pointer;
+}
+
+.builder-alert {
+  max-width: 500px;
+  margin: 1rem auto;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.builder-alert-error {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+}
+
+.builder-alert-success {
+  background: rgba(54, 236, 78, 0.15);
+  border: 1px solid rgba(54, 236, 78, 0.4);
+  color: rgba(54, 236, 78, 0.95);
+}

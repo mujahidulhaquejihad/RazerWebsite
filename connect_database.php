@@ -1,26 +1,20 @@
 <?php
-// Define constants if they are not already defined
-if (!defined('DB_SERVER')) {
-    define('DB_SERVER', 'localhost');
+/*
+This file contains database connection configurationuser "root" and password ""
+*/
+
+define('DB_SERVER', 'localhost');/* localhost */ /* sql110.epizy.com */
+define('DB_USERNAME', 'root');/* root */ 
+define('DB_PASSWORD', '');/*  */ 
+define('DB_NAME', 'wp_project');/* wp_project */ 
+
+// $database - variable
+$database = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+
+//Check the connection
+if ($database === false) {
+    die('Error: Cannot connect to database.');
 }
 
-if (!defined('DB_USERNAME')) {
-    define('DB_USERNAME', 'root');
-}
 
-if (!defined('DB_PASSWORD')) {
-    define('DB_PASSWORD', '');
-}
-
-if (!defined('DB_NAME')) {
-    define('DB_NAME', 'wp_project');
-}
-
-// Create connection
-$conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 ?>

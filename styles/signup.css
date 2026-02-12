@@ -1,0 +1,165 @@
+/* Signup – same vibe as login: black, white, green, Roboto Mono */
+.auth-body {
+  background-color: rgb(0, 0, 0);
+}
+
+.auth-page {
+  min-height: calc(100vh - 140px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 520px;
+  background: rgba(18, 18, 18, 0.95);
+  border: 1px solid rgba(54, 236, 78, 0.25);
+  border-radius: 12px;
+  padding: 2rem 2rem 2.25rem;
+  box-shadow: 0 0 40px rgba(54, 236, 78, 0.08);
+}
+
+.auth-card-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.auth-card-header h1 {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.35rem;
+  letter-spacing: 0.02em;
+}
+
+.auth-card-header p {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.auth-alert {
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.25rem;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.85rem;
+}
+
+.auth-alert-error {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  color: #f87171;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.auth-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 500px) {
+  .auth-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.auth-field label {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.auth-input-wrap {
+  position: relative;
+  display: block;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(54, 236, 78, 0.06) 0%, transparent 50%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.auth-field:focus-within .auth-input-wrap {
+  border-color: rgba(54, 236, 78, 0.35);
+  box-shadow: 0 0 0 1px rgba(54, 236, 78, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.auth-field input {
+  width: 100%;
+  padding: 0.85rem 1rem 0.85rem 1.1rem;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.9rem;
+  color: #fff;
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: block;
+  border-left: 3px solid transparent;
+}
+
+.auth-field input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.auth-field input:focus {
+  outline: none;
+  border-left-color: rgba(54, 236, 78, 0.9);
+}
+
+.auth-submit {
+  margin-top: 0.5rem;
+  padding: 0.85rem 1.25rem;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #000;
+  background: rgba(54, 236, 78, 0.9);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.auth-submit:hover {
+  background: rgba(54, 236, 78, 1);
+  box-shadow: 0 0 20px rgba(54, 236, 78, 0.35);
+}
+
+.auth-switch {
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 0.5rem;
+}
+
+.auth-switch a {
+  color: rgba(54, 236, 78, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-switch a:hover {
+  color: rgba(54, 236, 78, 1);
+  text-decoration: underline;
+}
